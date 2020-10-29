@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML表单标签</title>
+</head>
+<body>
+    <!--
+        表单，用于向服务器发送数据
+        method表示消息发送方式，get为明文，post为密文
+    -->
+    <form action="" method="get">
+        <!-- 
+            input 用于表单中收集用户信息
+            其type属性用来表示input的不同样式
+            其name属性用来记录将要发送给服务器信息的别称
+         -->
+        <span>姓名：</span><input type="text" name="userName">
+        <br>
+        <span>籍贯：</span>
+        <select name="bornProvince" id="">
+            <option value="hlj">黑龙江省</option>
+            <option value="sc">四川省</option>
+            <option value="japan">日本省</option>
+        </select>
+        <br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
