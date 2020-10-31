@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>背景bg</title>
+		<style>
+			.div1,
+			.div2,
+			.div3,
+			.div4 {
+				width: 400px;
+				height: 350px;
+				margin-bottom: 20px;
+                
+			}
+
+			.div1 {
+                /* border: dashed 10px black; */
+                /* background: rgb(135, 206, 235) ;  */
+                
+			}
+			.div1 {
+			/* 背景颜色 */
+			/* background: skyblue; */
+			/* background: rgb(135, 206, 235) ; */
+
+			/* 背景图片 */
+			/* background: url(./images/small.jpg) no-repeat; */
+            /* background-image: url(./images/small.jpg) ; */
+			/* background-size: 100px 100px; */
+			/* 背景颜色+背景图片 */
+			/* background:skyblue url(./images/small.jpg) no-repeat  center center; */
+			/* 背景大小 */
+			/* background:url(./images/small.jpg) no-repeat  center center; */
+			/* background-size只对背景图片起作用, 如果只设置一个值，按照原图尺寸比例来放大或者缩小图片 */
+			/* background-size: 20px; */
+			
+            background-image: url(./images/small.jpg) ;
+            background-size: cover;
+			/* background-size: cover; */
+			/* background-size: contain; */
+			border: dashed 10px black;
+			}
+			.div2 {
+				/* 平铺方式(不设置就是默认repeat)  设置透明图像*/
+
+				/* background: url(./images/small.jpg) repeat; */
+				background: url(./images/small.jpg) no-repeat;
+				/* background: url(./images/small.jpg) repeat; */
+				/* background: url(./images/small.jpg) repeat-x; */
+				/* background: url(./images/small.jpg) repeat-y; */
+				/* background: url(./images/small.jpg) inherit; */
+				/*图片居中显示 */
+				border: dashed 10px black;
+			}
+			.div3 {
+				/* 背景图像的位置*/
+				/* 背景图片的左上角刚好和padding的外边沿对齐,与border的内边沿对齐 --> */
+				/* background: url(./images/small.jpg) center; */
+				background: url(./images/small.jpg) no-repeat left top;
+				background: url(./images/small.jpg) no-repeat left bottom;
+				/* background: url(./images/small.jpg) no-repeat left center; */
+				/* background: url(./images/small.jpg) no-repeat right top; */
+				/* background: url(./images/small.jpg) no-repeat right bottom; */
+				/* background: url(./images/small.jpg) no-repeat right center; */
+				/* background: url(./images/small.jpg) no-repeat center top; */
+				/* background: url(./images/small.jpg) no-repeat center bottom; */
+				/* background: url(./images/small.jpg) no-repeat center center; */
+				/* 错误写法 */
+				/* background: url(./images/small.jpg) no-repeat top bottom; */
+				/* background: url(./images/small.jpg) no-repeat right left; */
+				padding: 30px;
+				border: dashed 10px black;
+				/* box-sizing: border-box; */
+			}
+			.div4 {
+				/* 背景图像定位区域 */
+				/* 注意如果背景图像background-attachment是"固定"，这个属性没有任何效果。 */
+				/* 错误写法,inherit 表示继承的是父级的某个属性，这里不清楚继承的是什么的属性 */
+				/*关于背景的 color、image、position、repeat这几个属性都有inherit值，所以应该分开写 */
+				background: url(./images/small.jpg) no-repeat;
+				/* background-origin: padding-box; */
+				/* background-origin: border-box; */
+				/* background-origin: content-box; */
+				border: dotted 10px black;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <div class="container"> -->
+		<!-- bg-color背景颜色 背景大小-->
+		<div class="div1">div1</div>
+		<!-- 背景图片 和平铺方式 -->
+		<div class="div2">div2</div>
+		<!-- 背景（或背景图像）的位置，left top是相对于谁的？ -->
+		<!-- padding box、border box、margin box？ -->
+		<!-- 背景图片的左上角刚好和padding的外边沿对齐,与border的内边沿对齐 -->
+		<div class="div3">div3</div>
+		<!--  -->
+		<div class="div4">div4</div>
+		<!-- </div> -->
+	</body>
+</html>
