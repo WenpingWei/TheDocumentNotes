@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS选择器优先级命名</title>
+</head>
+
+<body>
+    <style>
+        html,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .product li {
+            float: left;
+            width: 290px;
+            /* IE盒模型 */
+            box-sizing: border-box;
+            padding: 25px;
+
+            position: relative;
+
+        }
+
+        .product li:hover {
+            border: 1px #f60 solid;
+        }
+
+        .pro-img {
+            width: 100%;
+        }
+
+        .pro-title {
+            display: block;
+            padding: 8px 0;
+        }
+
+        .pro-title:hover {
+            color: #f60;
+        }
+
+        .pro-intro {
+            margin-bottom: 10px;
+        }
+
+        .pro-price {
+            float: left;
+            vertical-align: text-bottom;
+        }
+
+        .pro-price span {
+            color: #f60;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+        }
+
+        .pro-price span em {
+            font-style: normal;
+            font-size: 12px;
+        }
+
+        .pro-price del {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .pro-salenumber {
+            float: right;
+            padding-top: 8px;
+            vertical-align: text-bottom;
+        }
+
+        .pro-intro,
+        .pro-salenumber {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .pro-more {
+            /* 往上找，第一个有postion属性的盒子作为参照 */
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            line-height: 50px;
+            text-align: center;
+
+            background: #f30;
+            color: #fff;
+            width: 100%;
+            display: none;
+        }
+
+        .product li:hover .pro-more {
+            display: block;
+        }
+    </style>
+    <ul class="product">
+        <li>
+            <a href=""><img class="pro-img" src="images/cup.png"></a>
+            <a class="pro-title" href="">一次性纸杯定制印logo定做创意广告杯订制加厚杯子定做低价字</a>
+            <p class="pro-intro">评价 0 收藏 4352</p>
+            <div class="pro-price">
+                <span><em>￥</em>93</span>
+                <del>￥111</del>
+            </div>
+            <div class="pro-salenumber">月销 321笔</div>
+        </li>
+        <li>
+            <a href=""><img class="pro-img" src="images/cup.png"></a>
+            <a class="pro-title" href="">一次性纸杯定制印logo定做创意广告杯订制加厚杯子定做低价字</a>
+            <p class="pro-intro">评价 0 收藏 4352</p>
+            <div class="pro-price">
+                <span><em>￥</em>93</span>
+                <del>￥ 111</del>
+            </div>
+            <div class="pro-salenumber">月销 321笔</div>
+        </li>
+    </ul>
+
+    <ul class="product">
+        <li>
+            <a class="pro-more" href="">查看详情</a>
+            <a href=""><img class="pro-img" src="images/coat.png"></a>
+            <a class="pro-title" href="">一次性纸杯定制印logo定做创意广告杯订制加厚杯子定做低价字</a>
+            <p class="pro-price"><span><em>￥</em>93</span></p>
+            <div class="pro-salenumber">月销 321笔</div>     
+        </li>
+        <li>
+            <a class="pro-more" href="">查看详情</a>
+            <a href=""><img class="pro-img" src="images/coat.png"></a>
+            <a class="pro-title" href="">一次性纸杯定制印logo定做创意广告杯订制加厚杯子定做低价字</a>
+            <p class="pro-price"><span><em>￥</em>93</span> </p>
+            <div class="pro-salenumber">月销 321笔</div>
+        </li>
+    </ul>
+
+
+    <style>
+        .box {
+            clear: both;
+            background: #f60;
+            /* height: 300px; */
+            border: 1px #f00 solid;
+        }
+        .fl {
+            /* float: left; */
+        }
+        .fr {
+            /* float: right; */
+        }
+    </style>
+    <!--<div class="box">
+        <div class="fl">标题标题标题标题标题</div>
+        <div class="fr">内容内容内容</div>
+    </div>-->
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(3)高度塌陷</title>
+</head>
+<body>
+    <!-- 1.本质与诱因:子元素浮动导致的父元素高度消失 -->
+    <!-- 
+        2.解决办法 
+        (1)父级float，然而这样父级就脱离文档流了
+        (2)overflow:hidden，对类似下拉菜单这样不友好
+        (3)display:inline-block，变成类似文本的效果
+        (4)position:absolute，需要自己找位置
+    -->
+    <!-- <style>
+        *{ margin: 0; padding: 0; }
+        .container{ 
+            border: 1px solid black; 
+            /* position: absolute; */
+        } 
+        .div1{ 
+            width: 200px; height: 100px; background: #f60; 
+            float: left;
+        }
+        .div2{ 
+            width: 150px; height: 80px; background: #0f6; 
+            float: right;
+        }
+    </style>
+
+    <div class="container">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+    </div> -->
+     
+        
+
+
+    <!-- 3.BFC（Block Formating Context，即块状格式化上下文） -->
+    <!-- 4.应用场景 -->
+    <!-- 
+        (1)添加空白块级元素，为其设置clear:both
+        (2)在父级伪元素添加clear:both
+    -->
+    <style>
+        *{ margin: 0; padding: 0; }
+        .container{ border: 1px solid black; background: skyblue; }
+        /* .container::after{
+            content: "";
+            display:block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        } */
+        .div1{ 
+            width: 200px; height: 100px; background: #f60; 
+            float: left;
+        }
+        .div2{ 
+            width: 150px; height: 80px; background: #0f6; 
+            float: right;
+        }
+    </style>
+    <div class="container">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <!-- <div style="clear:both;"></div> -->
+    </div>
+    <div style="clear:both;"></div>
+    <h2>hello</h2>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(2)文档流排列</title>
+</head>
+<body>
+    <!-- 文档流排列 -->
+    <style>
+        *{ margin: 0; padding: 0; }
+        /* 1.浮动元素的文档流排列 流水排列 */
+        div{ float: left; }
+        /* 2.普通元素的文档流排列 上到下左到右 */
+        /* div{ display: inline-block; } */
+        .div1{ width: 300px; height: 200px; background: orange; }
+        .div2{ width: 200px; height: 150px; background: green; }
+        .div3{ width: 400px; height: 120px; background: blue; }
+        .div4{ width: 800px; height: 200px; background: pink; }
+    </style>
+    <div class="div1">div1</div>
+    <div class="div2">div2</div>
+    <div class="div3">div3</div>
+    <div class="div4">div4</div>
+
+
+    <!-- 文字环绕与“半脱” -->
+    <!-- 
+        浮动效果能够元素在文档流中“消失”，
+        但是
+            其他元素仅仅在定位坐标的时候会忽略浮动元素
+            其他元素的文本依然会绕开浮动元素，认为它是一个存在的结构
+        
+        所以浮动可以认为是使得元素半脱离文档流
+     -->
+    <!-- <style>
+        .floatDiv{ 
+             width: 200px; height: 100px; border: 1px solid black; 
+            float: left;
+        } 
+    </style>
+    <div class="floatDiv"></div>
+    <h2>这是用来测试浮动元素【文字环绕】效果的h2标题</h2> -->
+
+
+
+    <!-- 绝对定位与“全脱” -->
+    <!-- <style>
+        .positionDiv{ 
+            width: 200px; height: 100px; border: 1px solid black; 
+            position: absolute;
+        }
+    </style>
+    <div class="positionDiv"></div>
+    <h2>这是用来测试绝对定位元素【全部脱离文档流】效果的h2标题</h2> -->
+</body>
+</html>

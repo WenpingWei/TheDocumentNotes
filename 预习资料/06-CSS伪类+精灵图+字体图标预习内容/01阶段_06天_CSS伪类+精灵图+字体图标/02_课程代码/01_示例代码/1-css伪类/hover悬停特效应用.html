@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(1)-hover悬停特效应用</title>
+</head>
+<body>
+    <!-- hover悬停特效 -->
+    <style>
+        .wrap{ width:800px; margin: 0 auto; }
+        .about{ padding: 30px; background: #ffc0c0; }
+        .btn{ 
+            background: #f60; color: #fff; padding: 5px 10px;
+            border-radius: 5px; text-decoration: none;position: relative; }
+        .btn::before{ 
+            content: ""; display: none; width: 0px; height: 0px; 
+            position: absolute;
+            bottom: -10px; left: 20px;
+            border: 5px solid #333;
+            border-color: #333 transparent transparent transparent; }
+        .btn::after{
+            content: ""; display: block; width: 0px; height: 0px; 
+            position: absolute;
+            top: -10px; left: 20px;
+            border: 5px solid #f60;
+            border-color: transparent transparent #f60 transparent; 
+        }
+
+        /* .about被悬停时，内部元素.btn跟随发生变化 */
+        .about:hover .btn{ background: #999; }
+        /* .about被悬停时，内部元素.btn的伪元素::after发生变化 */
+        .about:hover .btn::after{ border-color: transparent transparent #999 transparent; }
+        /* .btn被悬停时，自己本身发生的变化 */
+        .about .btn:hover{ background: #333; }
+        /* .btn被悬停时，自己的伪元素::before在hover状态下发生的变化 */
+        .about .btn:hover::before{ display: block; }
+        /*  */
+        .about .btn:hover::after{ border-color: transparent transparent #333 transparent; }
+    </style>
+
+    <div class="wrap">
+        <div class="about">
+            <a class="btn" href="">按钮</a>
+        </div>
+    </div>
+
+</body>
+</html>

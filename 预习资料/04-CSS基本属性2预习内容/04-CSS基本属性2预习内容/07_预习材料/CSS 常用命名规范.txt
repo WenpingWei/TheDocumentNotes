@@ -1,0 +1,40 @@
+//方位
+  top
+  right
+  left 
+  bottom
+  side  侧边
+
+//功能
+  nav  导航
+  banner  轮播
+  news  新闻
+  product  产品
+  case  模块
+
+//盒子
+  box 
+  bar  条
+  main  主体
+  container  容器
+  context 内容区
+
+//属性功能
+  img  图
+  text 文本
+  title 标题
+  attr 属性
+  info 信息
+  intro 介绍
+  read 阅读内容
+
+//例如：
+  side-nav
+  news-img
+  news-text
+  news-read
+  news-box-img
+  news-text-img
+  news-main-img 
+  news-left-text-img
+  news-right-main-text

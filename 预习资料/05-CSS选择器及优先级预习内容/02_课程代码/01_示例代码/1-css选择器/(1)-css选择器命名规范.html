@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(1)-css选择器命名规范</title>
+</head>
+<body>
+    <!-- 
+        选择器命名时一定要起有意义的名字，
+        这对直观理解文档含义有很高作用。
+        //
+        无意义的名字无论对于自己还是别人都是折磨，
+        在后期对项目维护和团队合作时甚至可以说是一场灾难。
+    -->
+
+
+    <!-- 无意义命名 在没有注释的情况下我写的这破玩意儿鬼知道是什么意思-->
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3">
+        <div class="div5"></div>
+        <div class="div6">
+            <div class="div7"></div>
+            <div class="div8"></div>
+        </div>
+        <div class="div6">
+            <div class="div7"></div>
+            <div class="div8"></div>
+        </div>
+    </div>
+    <div class="div4"></div>
+
+
+
+    <!-- 有意义命名 即使没有注释也能立即清楚代码结构大概含义，语义化的重要性-->
+    <div class="header"></div>
+    <div class="nav"></div>
+    <div class="container">
+        <div class="aside"></div>
+        <div class="section">
+            <div class="article"></div>
+            <div class="article"></div>
+        </div>
+        <div class="section">
+            <div class="article"></div>
+            <div class="article"></div>
+        </div>
+    </div>
+    <div class="footer"></div>
+
+
+</body>
+</html>

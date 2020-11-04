@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(2)-css选择器使用规范</title>
+</head>
+<body>
+    <!-- 
+        1.低权重，高可读
+        2.就近原则,尽可能不超过3层
+        3.层级过深，采用标签
+    -->
+    <style>
+        /* 1.低权重，高可读 */
+        /* 这种就比较低可读性 */
+        /* .container div{
+            border: 1px solid black;
+        } */
+        /* 高可读 */
+        /* .container .aside{  */
+            /* 低权重 */
+            /* color:#f00; */
+            /* 高权重 尽量避免*/
+            /* color: #ff0 !important; */
+        /* } */
+        
+        /* 2.就近原则,尽可能不超过3层*/
+        /* .aside{} */
+        /* .nav{} */
+        /* .section1 */
+        /* 完全没有必要这么多级选择器修饰 */
+        /* .container .section1 .article i{} */
+        /* 就近直接描述即可 */
+        /* 3.层级过深，采用标签，不必再单独添加类名或id */
+        /* .section1 .icon{} */
+        /* .section1 .hightlit{} */
+    </style>
+    <div class="header">header</div>
+    <div class="nav"></div>
+    <div class="container">
+        <div class="aside">aside</div>
+        <div class="section section1">
+            <div class="article">article1<i class="icon"></i><i class="highlight"></i></div>
+            <div class="article">article2</div>
+        </div>
+        <div class="section section2">
+            <div class="article">article3</div>
+            <div class="article">article4</div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

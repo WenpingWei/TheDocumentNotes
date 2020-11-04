@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三栏布局</title>
+</head>
+<body>
+    <!-- 1.两栏布局 -->
+    <!-- <style>
+        *{ margin: 0; padding: 0; }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .leftMenu{ width: 100px; background: #3f3; float: left; }
+        .main{  margin-left: 100px; }
+    </style>
+    <div class="container">
+        <div class="leftMenu">
+            leftMenu
+            <p>
+                <a href="#">电子设备</a>
+                <a href="#">电子设备</a>
+                <a href="#">电子设备</a>
+                <a href="#">电子设备</a>
+                <a href="#">电子设备</a>
+                <a href="#">电子设备</a>
+            </p>
+        </div>
+        <div class="main">
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+        </div>
+    </div> -->
+        
+
+
+    
+    <!-- 2.三栏布局 -->
+    <!-- ps:如果元素先后顺序发生变化，如何保证页面仍然是左中右正常布局？ -->
+    <!-- <style>
+        *{ margin: 0; padding: 0; }
+        .leftMenu{ width: 100px; background: #3f3; float: left; }
+        .main{ margin: 0 100px;  }
+        .rightMenu{ width: 100px; background: orange; float: right; }
+    </style>
+    <div class="leftMenu">leftMenu</div>
+    <div class="rightMenu">rightMenu</div> 
+    <div class="main">
+        <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+    </div> -->
+
+
+
+
+
+
+    <!-- ps:三栏布局的BFC问题 -->
+    <!-- <style>
+        *{ margin: 0; padding: 0; }
+        .leftMenu{ width: 100px; height: 300px; background: #3f3; float: left; }
+        .main{ margin: 0 100px;  }
+        .rightMenu{ width: 100px; background: orange; float: right; }
+        /* .container::after{ content:""; display: block; clear: both; } */
+        .container{
+            background: skyblue;
+        }
+    </style>
+    <div class="container">
+        <div class="leftMenu">leftMenu</div>
+        <div class="rightMenu">rightMenu</div> 
+        <div class="main">
+            <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <div>这是下面的内容区，比如是新闻</div> -->
+    
+
+
+    <!-- ps:三栏布局全浮动问题 -->
+    <style>
+        *{ margin: 0; padding: 0; }
+        .leftMenu{ width: 100px; height: 300px; background: #3f3; float: left; margin-left: -100%;  }
+        .main{ margin: 0 100px 0 100px;  }
+        .container{ width:100%; float: left; }
+        .rightMenu{ width: 100px; background: orange; float: left; margin-left: -100px; }
+        .container-clear::after{ content: ""; display: block; clear: both; }
+        .container-clear{
+            width: 1200px; margin: 0 auto;
+        }
+    </style>
+    <div class="container-clear">
+        <div class="container">
+            <div class="main">
+                <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+                <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+                <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+                <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+                <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+                <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+                <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+                <h2 style="background: blue;">导航菜单导航菜单导航菜单导航菜单</h2>
+            </div>
+        </div>
+        <div class="leftMenu">leftMenu</div>
+        <div class="rightMenu">rightMenu</div> 
+    </div>
+    <!-- <div style="clear: both;"></div> -->
+    <div>这是内容</div>
+</body>
+</html>

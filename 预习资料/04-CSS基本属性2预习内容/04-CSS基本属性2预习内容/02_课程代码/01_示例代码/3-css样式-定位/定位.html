@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定位</title>
+</head>
+<body>
+    
+    <!-- 绝对定位 -->
+    <!-- <style>
+        *{ margin: 0; padding: 0; }
+        .div1{ 
+            width: 200px; 
+            height: 100px; 
+            border: 1px solid black;
+            position: absolute;
+            top: 50px;
+        }
+    </style>
+    <div class="div1">这是div1</div> -->
+
+    <!-- 堆叠属性 -->
+    <!-- <style>
+        *{ margin: 0; padding: 0; }
+        .div1{ width: 100px; height: 100px; background: red; position: absolute; z-index: 2;}
+        .div2{ width: 200px; height: 200px; background: blue; position: absolute; z-index: 1;}
+        .div3{ width: 300px; height: 300px; background: green; position: absolute; z-index: 0;}
+    </style>
+    <div class="div1">这是div1</div>
+    <div class="div2">这是div2</div>
+    <div class="div3">这是div3</div> -->
+
+
+    <!-- 父子关系 永远在上（小米官网侧边菜单）-->
+    <!-- <style>
+        .div1,.div2{ width: 200px; height: 100px; border: 1px solid black; position: relative;}
+        .div1{ z-index: 5; }
+        .div2{ z-index: 6; }
+        .div3{ width: 50px; height: 300px; background: orange; border: 1px solid black; 
+            position: absolute; z-index: 20000;
+        }
+        .div4{ width: 50px; height: 300px; background: red; border: 1px solid black; 
+            position: absolute; z-index: 1;
+        }
+    </style>
+    <div class="div1">
+        <div class="div3">div3</div>
+    </div>
+    <div class="div2">
+        <div class="div4">div4</div>
+    </div> -->
+    
+</body>
+</html>

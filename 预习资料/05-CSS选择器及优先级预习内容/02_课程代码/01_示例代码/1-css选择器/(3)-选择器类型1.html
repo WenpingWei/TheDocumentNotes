@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(3)-选择器类型1</title>
+</head>
+<body>
+    <!-- 
+        基础选择器、属性选择器、伪类选择器、伪元素选择器。。。
+
+        1.基本使用
+        ID选择器        ID
+        类选择器        Class
+        元素选择器      元素
+        通配符选择器    *
+    -->
+    <!-- <style>
+        /* #div-id{ color: #f00; } */
+        /* .div-class{ width: 300px; height: 100px; border: 3px solid black; } */
+        /* div{ text-align: center; line-height: 100px; } */
+        /* *{ margin: 0; padding: 0; list-style: none; } */
+    </style>
+    <div class="div-class" id="div-id">这是用来测试选择器的div</div>
+    <div class="div-class" id="div-id">这是用来测试选择器的div</div>
+    <div class="div-class" id="div-id">这是用来测试选择器的div</div>
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+    </ul> -->
+
+    <!-- 
+        ps：注意编码约定
+        在一个页面中，一个类名可以被同时赋予多个元素出现多次
+        在一个页面中，一个id名能且仅能出现一次（并不是说不生效，而是约定只出现一次）
+        *通配符就是一个符号，不需要也没有别的写法。
+    -->
+    <!-- <style>
+        .div-class{ width: 300px; height: 100px; border: 3px solid black; }
+        #div-id{ color: #f00; }
+        div{ text-align: center; line-height: 100px; }
+        *{ margin: 0; padding: 0; }
+    </style>
+    <div class="div-class" id="div-id">这是用来测试选择器的div1</div>
+    <div class="div-class" id="div-id">这是用来测试选择器的div2</div>
+    <div class="div-class" id="div-id">这是用来测试选择器的div3</div>
+    <script>
+        var div1 = document.getElementById("div-id");
+        // console.log(div1);
+        var divs = document.getElementsByClassName("div-class");
+        // console.log(divs, divs[0], divs[1], divs[2]);
+    </script> -->
+
+</body>
+</html>

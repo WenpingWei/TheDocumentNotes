@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(1)边距叠加</title>
+</head>
+<body>
+    <!--1.垂直相邻块元素margin会发生合并，取大值 （margin合并）-->
+    <!-- 思考：padding呢？下方同理 -->
+    <!-- <style>
+        *{ margin: 0; padding: 0; }
+        .div{ border: 1px solid black; width: 200px; height: 100px; }
+        .div1{ margin-bottom: 20px; }
+        .div2{ margin-top: 50px; }
+    </style> -->
+    <!-- <div class="div div1">div1</div> -->
+        <!-- ps:若非相邻，则可以解决这个问题。 -->
+        <!-- <div>normal div</div> -->
+        <!-- <span>normal span</span> -->
+        <!-- <br> -->
+    <!-- <div class="div div2">div2</div> -->
+
+
+
+    <!--2.垂直相邻父子级元素margin会发生合并(margin击穿)-->
+    <!-- <style>
+        /* *{ margin: 0; padding: 0; }
+        .father{ 
+            width: 200px; height: 150px; 
+            background: #0f6;
+            margin-top: 50px; */
+            
+            /* ps：父级添加边框，保护击穿，但大小会变化 */
+            /* border: 1px solid black; */
+            /* ps：添加overflow: auto，保护击穿，auto不可控*/
+            /* overflow: auto; */
+        /* } */
+        /* ps：添加伪元素，比较常用 */
+        .father::before{
+            content: "";
+            /* 请自行查询display:block和display:table的区别 */
+            display: table;
+        }
+        .son{ 
+            width: 100px; height: 75px; 
+            background: #06f;
+            border: 1px solid #f00; 
+            margin-top: 30px;
+        } -->
+    <!-- </style>
+    <div class="father">
+        <div class="son">sonDiv</div>
+    </div> -->
+    
+
+
+    <!--3.水平方向元素边距合并问题-->
+    <!-- <style>
+        /* ps:行内块元素水平方向边距合并问题 */
+        /* div{ display: inline-block; width: 200px;height: 50px; } */
+        /* ps:浮动元素水平方向边距合并问题 */
+        /* div{ float: left; width: 200px; height: 50px; } */
+        /* ps:行内元素水平方向边距合并问题 */
+        div{ display: inline; width: 200px; height: 50px; }
+
+        .div1{ background: #f60; margin-right: 20px; }
+        .div2{ background: #0f6; margin-left: 50px; }
+    </style> -->
+    <!-- <div class="div1">div1</div>
+    <div class="div2">div2</div> -->
+    
+
+
+    <!-- 4.边距负值问题 -->
+    <style>
+        div{ width: 200px; height: 100px; }
+        .div1{ background-color:#f00; margin-bottom: 50px; }
+        /* .div2{ background-color:#0f6; margin-top: -55px; height: 5px; } */
+        /* .div2{ background-color:#0f6; margin-top: -50px; } */
+        .div2{ background-color:#0f6; margin-top: -80px; }
+        /* .div2{ background-color:#0f6; margin-top: -150px; } */
+        /* .div2{ background-color:#0f6; margin-top: -170px; } */
+    </style>
+    <div class="div1">div1</div>
+    <div class="div2">div2</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣杯布局</title>
+</head>
+<body>
+    <style>
+        
+        .main {
+            background: #ccc;
+            padding: 0 150px 0 200px;
+            /* overflow: hidden; */
+        }
+        .center,
+        .left,
+        .right {
+            float: left;
+        }
+        .center {
+            width:100%;
+            background: #666;
+        }
+        .left {
+            width:200px;
+            margin-left:-100%;
+            position: relative;
+            left:-200px;
+            background: #f60;
+        }
+        .right {
+            width:150px;
+            margin-left:-150px;
+            position: relative;
+            left:150px;
+            background: pink;
+        }
+        .clearfixed::after {
+            content: "";
+            display: block;
+            clear: both;            
+        }
+    </style>
+    
+    <!-- padding: 0 150px 0 200px; -->
+    <div class="main clearfixed">
+
+        <!-- float:left; width:100%; -->
+        <div class="center">中间<br>中间</div>
+        
+        <!-- float:left; width:200px; margin-left:-100%;position: relative; left:-200px;  -->
+        <div class="left">左边</div>
+        
+        <!-- float:left; width:150px; margin-left:-150px; position: relative;left:150px;-->
+        <div class="right">右边</div>
+        
+    </div>
+
+    <footer>页脚</footer>
+    
+</body>
+</html>
