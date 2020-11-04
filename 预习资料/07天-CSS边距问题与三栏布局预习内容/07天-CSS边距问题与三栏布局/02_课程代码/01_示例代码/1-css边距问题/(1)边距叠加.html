@@ -9,23 +9,23 @@
 <body>
     <!--1.垂直相邻块元素margin会发生合并，取大值 （margin合并）-->
     <!-- 思考：padding呢？下方同理 -->
-    <!-- <style>
+    <style>
         *{ margin: 0; padding: 0; }
         .div{ border: 1px solid black; width: 200px; height: 100px; }
         .div1{ margin-bottom: 20px; }
         .div2{ margin-top: 50px; }
-    </style> -->
-    <!-- <div class="div div1">div1</div> -->
+    </style>
+    <div class="div div1">div1</div>
         <!-- ps:若非相邻，则可以解决这个问题。 -->
         <!-- <div>normal div</div> -->
         <!-- <span>normal span</span> -->
         <!-- <br> -->
-    <!-- <div class="div div2">div2</div> -->
+    <div class="div div2">div2</div>
 
 
 
     <!--2.垂直相邻父子级元素margin会发生合并(margin击穿)-->
-    <!-- <style>
+    <style>
         /* *{ margin: 0; padding: 0; }
         .father{ 
             width: 200px; height: 150px; 
@@ -42,17 +42,18 @@
             content: "";
             /* 请自行查询display:block和display:table的区别 */
             display: table;
+            margin-top: 50px;
         }
         .son{ 
             width: 100px; height: 75px; 
             background: #06f;
             border: 1px solid #f00; 
             margin-top: 30px;
-        } -->
-    <!-- </style>
+        }
+    </style>
     <div class="father">
         <div class="son">sonDiv</div>
-    </div> -->
+    </div>
     
 
 
@@ -74,7 +75,7 @@
 
 
     <!-- 4.边距负值问题 -->
-    <style>
+    <!-- <style>
         div{ width: 200px; height: 100px; }
         .div1{ background-color:#f00; margin-bottom: 50px; }
         /* .div2{ background-color:#0f6; margin-top: -55px; height: 5px; } */
@@ -84,6 +85,6 @@
         /* .div2{ background-color:#0f6; margin-top: -170px; } */
     </style>
     <div class="div1">div1</div>
-    <div class="div2">div2</div>
+    <div class="div2">div2</div> -->
 </body>
 </html>

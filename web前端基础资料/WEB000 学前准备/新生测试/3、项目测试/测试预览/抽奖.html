@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>lucky</title>
+<style>
+	html,body { padding:0; margin:0;}
+	.clear { clear:both;}
+	.box { width:500px; text-align:center; margin:0 auto; margin-top:100px;  border-radius:10px; padding:40px 0;box-shadow:0 0 20px 0 rgba(0,0,0,0.1);}
+	.list { width:416px; margin:0 auto;}
+	.list span { width:100px; height:100px; margin:2px; display:inline-block; float:left; background:#f1f1f1; text-align: center; line-height: 100px;}
+	.btn { background: #f90; color:#fff; display: inline-block; padding:0 20px; line-height:50px; height:50px; margin-top:30px; border-radius:25px; cursor:pointer}
+	.btn:hover { background:#f60;}
+</style>
+</head>
+
+<body>
+<div class="box">
+    <div class="list">
+        <span id="box0"></span>
+        <span id="box1"></span>
+        <span id="box2"></span>
+        <span id="box3"></span>
+        
+        <span id="box11"></span>
+        <span></span>
+        <span></span>
+        <span id="box4"></span>
+        
+        <span id="box10"></span>
+        <span></span>
+        <span></span>
+        <span id="box5"></span>
+        
+        <span id="box9"></span>
+        <span id="box8"></span>
+        <span id="box7"></span>
+        <span id="box6"></span>
+        
+    </div>
+    <div class="clear"></div>
+    <div class="btn" onClick="choujiang()">点击抽奖</div>
+</div>
+	
+	
+
+<script language="javascript">
+
+	/* 通过 id 获取对象 */
+	function id(name){
+		return document.getElementById(name);
+	}
+
+	var arr = ["铅笔","键盘","鼠标","笔记本","鼠标垫","耳机","显示器","手机壳","内存条","显卡","水杯","电脑版"];
+	
+	//显示所有奖品
+	for(var i=0; i<12; i++){
+		
+		id("box"+i).innerHTML = arr[i];
+		
+	}
+	
+	//设置多跑的圈数
+	var cycle = 3; 
+
+	//抽奖函数
+	function choujiang(){
+		
+		//生成中奖随机数
+		var r = Math.random() * 10;
+		r = Math.round(r);
+		
+		var step = arr.length; //每圈步数
+		var morestep = step * cycle; //多跑的步数 = 每圈步数 * 多跑的圈数
+		
+		//生成总跑动步数 = 多跑的步数 + 随机数
+		var totalstep = morestep + r ;
+
+		/*
+		 * run(计步数，总步数，跑的速度);
+		 * 计步数：从0开始，每执行一次加1
+		 * 总步数：一直不变
+		 * 跑的速度：值越来越大(越来越慢)
+		 */
+		//执行跑动
+		run(0, totalstep, 10);
+		
+	}
+
+	/*
+	 * count 循环计数
+	 * total 总步数
+	 * speed 速度
+	 */
+	function run(count, total, speed){
+
+		//获得索引
+		var index = count % arr.length;
+				
+		/*
+		 * 还原上一个格子样式
+		 */
+		//第一次没有上一个格子所以
+		if(count > 0){
+			if(index==0){
+				//上一个是最后一个
+				id("box"+(arr.length-1)).style.background = "#f1f1f1";
+			}
+			else{
+				id("box"+(index-1)).style.background = "#f1f1f1";
+			}
+		}
+		
+		//着色
+		id("box"+index).style.background = "#fff";
+		
+		//计数小于总步数就一直跑动
+		if(count < total){
+			
+			//控制跑动速度，不要过分纠结，反正就是speed在有规律的变大	
+			if(speed < 500){
+				
+				//设置：多出的步数还差两步跑完的时候开始加大speed的增长幅度
+				if(count > arr.length * cycle - 2){
+					
+					//加大speed增长幅度
+					speed = speed * (200/speed) + 50
+					
+				}
+				else{
+					//设置：多出的步数还差两步跑完之前speed都是 +2 的增长幅度;
+					speed = speed + 2;
+				}
+			}
+			
+			//计数加1
+			count++;
+			
+			//执行下一次跑动
+			setTimeout(function(){ run(count, total, speed); }, speed);
+			
+		}else{
+			
+			//取消下面注释，解锁新功能
+			//var oldstr = id("box"+index).innerHTML;
+			//seconds( id("box"+index), "什么？", 3, oldstr);
+			
+		}
+
+	}
+	
+	/*
+	 * 功能：读秒显示奖品
+	 * o	对象
+	 * str	读秒时显示的文字
+	 * s	秒
+	 * oldstr	读完秒最后显示的文字
+	 */
+	function seconds(o, str,  s, oldstr){
+		
+		//显示读秒文字
+		o.innerHTML = str + "(" + s + ")";
+		
+		//判断是否读完秒
+		if(s > 0){
+			
+			//秒数减1
+			s--;
+			
+			//进入下一秒
+			setTimeout(function(){seconds(o, str,  s, oldstr)},1000);
+			
+		}else{
+			
+			//秒读完了，显示最后的文字
+			o.innerHTML = oldstr;
+			
+		}
+	}
+	
+
+</script>
+
+</body>
+</html>

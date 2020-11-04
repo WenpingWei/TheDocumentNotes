@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>层级练习案例-二级菜单</title>
+  <style>
+    ul,
+    li,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    nav {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      background-color: #f2f2f2;
+      margin-top: 50px;
+      border-top: 1px solid #999;
+      border-bottom: 1px solid #999;
+    }
+
+    .nav-main {
+      width: 1200px;
+      height: 50px;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #999;
+    }
+
+    .nav-main li {
+      width: 25%;
+      height: 100%;
+    }
+
+    .nav-main li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      line-height: 50px;
+      transition: all .5s ease-in-out;
+    }
+
+    .nav-main li:hover {
+      background-color: rgb(66, 186, 216);
+      color: #fff;
+    }
+
+    .nav-sub {
+      display: none;
+      position: absolute;
+      top: 51px;
+      left: 0;
+      width: 100%;
+      background-color: #f2f2f2;
+      box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, .1);
+
+    }
+
+    .sub-content {
+      width: 1200px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px 0;
+      box-sizing: border-box;
+    }
+
+    .nav-sublist {
+      width: 100%;
+    }
+
+    .nav-sublist::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .nav-sublist li {
+      float: left;
+      width: 200px;
+      border-right: 1px solid #ddd;
+      text-align: center;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    .nav-sublist li:hover {
+      background-color: #fff;
+    }
+
+    .nav-sublist li a {
+      color: #333;
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+    .nav-sublist li a:hover {
+      background-color: #fff;
+      color: #333;
+    }
+
+    .nav-sublist li span {
+      font-size: 12px;
+      color: rgb(66, 186, 216);
+    }
+
+    .nav-sublist li:nth-child(6n) {
+      border-right: none;
+    }
+
+    .nav-main li:hover .nav-sub {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="nav-main">
+      <li>
+        <a href="#">首页</a>
+      </li>
+      <li>
+        <a href="#">手机</a>
+        <div class="nav-sub">
+          <div class="sub-content">
+            <ul class="nav-sublist">
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+              <li>
+                <img src="./images/iphone1.webp" alt="">
+                <a href="#">小米10 青春版 5G</a>
+                <span>2999起</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#">电视</a>
+        <div class="nav-sub">
+          <div class="sub-content">
+            <ul class="nav-sublist">
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+              <li>
+                <img src="./images/dian.webp" alt="">
+                <a href="#">Redmi 智能电视 MAX 98''</a>
+                <span>1898起</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#">笔记本</a>
+        <div class="nav-sub">
+          <div class="sub-content">
+            <ul class="nav-sublist">
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+              <li>
+                <img src="./images/bj.webp" alt="">
+                <a href="#">RedmiBook 16 锐龙版</a>
+                <span>3599起</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#">家电</a>
+        <div class="nav-sub">
+          <div class="sub-content">
+            <ul class="nav-sublist">
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+              <li>
+                <img src="./images/k.webp" alt="">
+                <a href="#">米家互联网空调C1</a>
+                <span>2099起</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>

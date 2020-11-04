@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(2)-精灵图</title>
+</head>
+<body>
+    <!-- 
+        1.css精灵 CSS Sprite
+            精灵、也叫精灵图、雪碧图。
+            是一种通过【background-image】和【background-position】加载页面图片的手段。
+        2.作用
+            页面中资源需要请求来加载，每一次请求都需要消耗时间资源和带宽资源。
+            页面中图片有很多张，如果每一张小图片都用一个单独的请求来获取则会非常奢侈。
+            //
+            精灵可以通过将多张图片合并为一张图片，
+            一次性把页面需要的所有图片在一次请求中获取下来，大大节约了时间和带宽资源。
+        3.使用
+            通过background-image加载精灵图
+            通过background-position找到对应需求图片的坐标并加载。
+    -->
+    <style>
+        .plugin{ width: 58px; height: 58px; border-radius: 50%;
+                background-image: url("./img/menuIcon1.png"); 
+                background-position-x: -100px;
+                background-position-y: -30px;
+        }
+        .plugin:hover{ background-position-x: 0px; }
+        /* .plugin1{ background-position-y: -30px; } */
+        .plugin2{ background-position-y: -130px; }
+        .plugin3{ background-position-y: -230px; }
+        .plugin4{ background-position-y: -330px; }
+        .plugin5{ background-position-y: -430px; }
+        .plugin6{ background-position-y: -530px; }
+        
+    </style>
+    <div href="#" class="plugin plugin1"></div>
+    <div href="#" class="plugin plugin2"></div>
+    <div href="#" class="plugin plugin3"></div>
+    <div href="#" class="plugin plugin4"></div>
+    <div href="#" class="plugin plugin5"></div>
+    <div href="#" class="plugin plugin6"></div>
+</body>
+</html>

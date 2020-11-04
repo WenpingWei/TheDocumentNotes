@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tst</title>
+</head>
+<body>
+    
+    <!-- 列表百分比布局案例（疯狂套壳子） -->
+    <!-- <style>
+        *{ margin: 0; padding: 0; list-style: none; }
+        .container{ background: #f90; padding: 50px 0; }
+        .container::after{
+            content: ""; display: block;
+            clear: both;
+        }
+        .menu{ width: 1260px; background: orange; margin: 15px auto; }
+        .menu li{ width: 25%; float: left; }
+        .menu-layer{ 
+            margin: 15px; height: 280px; background: url("./images/jing1.jpg");
+            background-size: 100%; position: relative; overflow: hidden;
+        }
+        .menu-layer::before{
+            content: ""; display: none; position: absolute; 
+            width: 100%; height: 100%; background: rgba(0,0,0,0.8);
+            z-index: 0;
+        }
+        .cont{ display: none; position: relative; }
+        .menu-layer h2{ color: #fff; text-align: center; margin: 50px 0 30px 0;}
+        .menu-layer h3{ color: #fff; text-align: center; }
+        /*  */
+        .menu-layer:hover::before{ display: block; }
+        .menu-layer:hover .cont{ display: block; }
+
+    </style>
+    <div class="container">
+        <ul class="menu">
+            <li><div class="menu-layer">
+                <div class="cont">
+                    <h2>PROJECT TITLE</h2>
+                    <h3>App develepment</h3>
+                </div>
+            </div></li>
+            <li><div class="menu-layer">
+                <div class="cont">
+                    <h2>PROJECT TITLE</h2>
+                    <h3>App develepment</h3>
+                </div>
+            </div></li>
+            <li><div class="menu-layer">
+                <div class="cont">
+                    <h2>PROJECT TITLE</h2>
+                    <h3>App develepment</h3>
+                </div>
+            </div></li>
+            <li><div class="menu-layer">
+                <div class="cont">
+                    <h2>PROJECT TITLE</h2>
+                    <h3>App develepment</h3>
+                </div>
+            </div></li>
+            <li><div class="menu-layer">
+                <div class="cont">
+                    <h2>PROJECT TITLE</h2>
+                    <h3>App develepment</h3>
+                </div>
+            </div></li>
+            <li><div class="menu-layer">
+                <div class="cont">
+                    <h2>PROJECT TITLE</h2>
+                    <h3>App develepment</h3>
+                </div>
+            </div></li>
+            <li><div class="menu-layer">
+                <div class="cont">
+                    <h2>PROJECT TITLE</h2>
+                    <h3>App develepment</h3>
+                </div>
+            </div></li>
+            <li><div class="menu-layer">
+                <div class="cont">
+                    <h2>PROJECT TITLE</h2>
+                    <h3>App develepment</h3>
+                </div>
+            </div></li>
+        </ul>
+    </div> -->
+
+
+    <!-- 列表对齐布局 -->
+    <style>
+        *{ margin: 0; padding: 0; list-style: none; }
+        .news{ width: 1260px; margin: 0 auto; }
+        li{ width:50%; float: left; }
+        .layer{ margin: 15px; overflow: hidden; }
+        .leftDiv{ text-align: right;}
+        .rightDiv{ 
+            float: right; width: 100px; height: 100px; 
+            background: green; border-radius: 50%; 
+            padding: 10px; margin-left: 10px;
+        }
+        .news li:nth-child(2n) .rightDiv{ 
+            float: left; 
+            margin-left: 0px;
+            margin-right: 10px;
+        }
+        .news li:nth-child(2n) .leftDiv{ text-align: left; }
+        .leftDiv b { font-size:24px; }
+        .leftDiv p {
+            font-size: 12px;
+            line-height: 1.8;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+    <ul class="news">
+        <li><div class="layer">
+            <div class="dv rightDiv"></div>
+            <div class="dv leftDiv">
+                <b>The title on the article</b>
+                <p>须搞懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相信很多初学者对这些属性存在许多困惑，容易把它们混淆，本文旨在帮助大家理清它们之间的关系并彻底搞懂它们。这里说明一点，__proto__属性的两边是各由两个下划线构成（这里为了方便大家看清，在两下划线之间加入了一个空格：_ _proto_ _，读作“</p>
+            </div>
+        </div></li>
+        <li><div class="layer">
+            <div class="dv rightDiv"></div>
+            <div class="dv leftDiv">
+                <b>The title on the article</b>
+                <p>须搞懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相信很多初学者对这些属性存在许多困惑，容易把它们混淆，本文旨在帮助大家理清它们之间的关系并彻底搞懂它们。这里说明一点，__proto__属性的两边是各由两个下划线构成（这里为了方便大家看清，在两下划线之间加入了一个空格：_ _proto_ _，读作“</p>
+            </div>
+        </div></li>
+        <li><div class="layer">
+            <div class="dv rightDiv"></div>
+            <div class="dv leftDiv">
+                <b>The title on the article</b>
+                <p>须搞懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相信很多初学者对这些属性存在许多困惑，容易把它们混淆，本文旨在帮助大家理清它们之间的关系并彻底搞懂它们。这里说明一点，__proto__属性的两边是各由两个下划线构成（这里为了方便大家看清，在两下划线之间加入了一个空格：_ _proto_ _，读作“</p>
+            </div>
+        </div></li>
+        <li><div class="layer">
+            <div class="dv rightDiv"></div>
+            <div class="dv leftDiv">
+                <b>The title on the article</b>
+                <p>须搞懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相信很多初学者对这些属性存在许多困惑，容易把它们混淆，本文旨在帮助大家理清它们之间的关系并彻底搞懂它们。这里说明一点，__proto__属性的两边是各由两个下划线构成（这里为了方便大家看清，在两下划线之间加入了一个空格：_ _proto_ _，读作“</p>
+            </div>
+        </div></li>
+        
+    </ul>
+
+</body>
+</html>
