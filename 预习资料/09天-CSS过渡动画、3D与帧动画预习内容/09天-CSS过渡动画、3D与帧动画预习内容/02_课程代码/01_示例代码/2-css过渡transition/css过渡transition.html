@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css过渡transition</title>
+</head>
+<body>
+
+    <!-- <style>
+        .div1{
+            width: 300px;
+            height: 200px;
+            border: 5px solid black;
+            margin: 100px;
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s;
+        }
+        img:hover{
+            transform: scale(1.2);
+        }
+        
+    </style>
+    <div class="div1">
+        <img src="img/house01.jpg" alt="">
+    </div> -->
+
+
+
+
+
+
+    <!-- 1.为什么要有transition -->
+    <!-- 因为transform也不够“震你一下” -->
+    <!-- transition 过渡样式 -->
+    <!-- 
+        transition：参与变化的样式 动画执行的时间 x x。
+     -->
+    <!-- <style>
+        .ad{
+            width: 300px; height: 300px;
+            background-image: url("./img/house01.jpg");
+            position: relative;   
+        }
+        .ad::after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0; right: 0; bottom: 0; top: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            transition: all 0.3s; 
+        }
+        .ad:hover::after{ 
+            top: 70%;
+            /* background: rgba(0, 255, 0, 0.8); */
+            /* 2.transition出现的位置不同，也代表了不同含义 */
+            /* transition: all 0.3s;  */
+        }
+    </style>
+    <div class="ad"></div> -->
+
+
+    <!-- 3.开闭合样式 -->
+    <!-- <style>
+        .ad{
+            width: 300px; height: 300px;
+            background-image: url("./img/house01.jpg");
+            position: relative;   
+        }
+        .ad::after, .ad::before{
+            content: "";
+            display: block;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            transition: all 0.3s linear 0.2s; 
+        }
+        .ad::after{ left: 0; right: 0; bottom: 0; top: 100%; }
+        .ad::before{ left: 0; right: 0; bottom: 100%; top: 0; }
+        .ad:hover::after{ top: 50%; }
+        .ad:hover::before{ bottom: 50%; }
+    </style>
+    <div class="ad"></div> -->
+
+
+
+    <!-- 4.进度条样式 -->
+    <!-- <style>
+        .box{ 
+            width: 200px; height: 200px; 
+            background: #333; margin: 100px; 
+            position: relative;
+        }
+        .box:hover{ background: pink; }
+        .progress{ position: absolute; background-color: red; }
+        .progress-top{ width: 0%; height: 5px; top: 0; }
+        .progress-right{ width: 5px; height: 0%; right: 0; }
+        .box:hover .progress-top{ width: 100%; transition: all 1s linear;}
+        .box:hover .progress-right{ height: 100%; transition: all 1s linear 1s;}
+    </style>
+    <div class="box">
+        <div class="progress progress-top"></div>
+        <div class="progress progress-right"></div>
+    </div> -->
+
+
+
+
+    <!-- 5.放大抖动样式 -->
+    <!-- 贝塞尔曲线函数 -->
+    <!-- <style>
+        .big{ 
+            width: 500px; height: 100px; margin: 200px auto;
+            border: 1px solid black;    
+            transition: all 5s cubic-bezier(.41,2.1,.6,-0.69);
+            transition: cu
+        }
+        .big:hover{
+            box-shadow: 0 0 10px #333;
+            transform: scale(1.2);
+        }
+    </style>
+    <div class="big"></div> -->
+
+</body>
+</html>

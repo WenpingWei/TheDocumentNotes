@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+<script type="text/javascript" src="images/wx_public.js"/></script>
+<script language="javascript">
+	var wanxipublic = new WanxiPublicTop({
+		
+		title	: "列表鼠标特效1",	//文档标题
+		time	: "2018-12-28",	//时间
+		student	: "",			//学生
+		teacher	: '胡涛',		//老师
+		adviser	: ''			//班主任
+		
+	});
+</script>
+<!-- 代码开始 -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"/></script>
+<style>
+html,body,div { margin: 0 auto; padding: 0; position: relative;} 
+ul,li { list-style: none;}
+.wrap { margin:10px auto; width: 1400px;}
+.clear { clear: both; display: block;}
+.maintitle { font-size: 24px; text-align: center; margin-top: 0px; display:block}
+.list { margin: 0 -8px; }
+.list li { width: 33.333%; float:left;}
+.list li .box { margin: 8px; display: block; position: relative;}
+.list li .box img { width: 100%; display: block}
+.list li .layer { position:absolute; left: 8px; top:100%; right:8px; bottom:8px; background: rgba(0,0,0,0.6); opacity: 0; text-align: center; display: flex; align-items: center;}
+.list li .layer .txt { color:#fff; display: inline-block; border:1px #fff solid; padding:10px 20px; font-size:24px; max-width: 80%;}
+
+/* css */
+.csslist li .layer {
+	transition:ease 0.5s;
+	-moz-transition:ease 0.5s;
+	-webkit-transition:ease 0.5s;
+	-o-transition:ease 0.5s;
+}
+.csslist li:hover .layer {  opacity: 1; top:8px;}
+
+/* css 帧动画 */
+.keyframeslist li:hover .layer {  animation:hover 1s forwards}
+@keyframes hover {
+	0%{ opacity: 0; top:100%;}
+	100%{opacity: 1; top:8px;}
+}
+
+</style>
+<div class="openwindow"></div>
+
+<div class="wx-public-des">
+<div class="maintitle">JS控制</div>
+<b style="font-size: 18px">内容居中text-align: center; display: flex; align-items: center;</b>
+<pre><strong>知识点：</strong>
+$("#jslist li").hover(function(){
+	$(this).find(".layer").stop().animate({"top":"8px","opacity":"1"})
+},function(){
+	$(this).find(".layer").stop().animate({"top":"100%","opacity":"0"})
+})
+</pre>
+	<div class="clear"></div>
+</div>
+		
+
+<div class="wrap">
+	<ul class="list" id="jslist">
+		<li>
+			<a href="#" class="box">
+				<img src="images/house01.jpg">
+				<div class="layer"><div class="txt">北大资源·紫境府不管内容多少都是居中</div></div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="box">
+				<img src="images/house02.jpg">
+				<div class="layer"><div class="txt">融创·香璟臺</div></div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="box">
+				<img src="images/house03.jpg">
+				<div class="layer"><div class="txt">北大资源·紫境府</div></div>
+			</a>
+		</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="wx-public-des">
+		<div class="maintitle">CSS控制</div>
+<pre><strong>知识点：</strong>
+.csslist li .layer {
+	transition:ease 0.5s;
+	-moz-transition:ease 0.5s;
+	-webkit-transition:ease 0.5s;
+	-o-transition:ease 0.5s;
+}
+.csslist li:hover .layer {  opacity: 1; top:8px;}
+</pre>
+<div class="clear"></div>
+</div>	
+
+<div class="wrap">
+	<ul class="list csslist">
+		<li>
+			<a href="#" class="box">
+				<img src="images/house01.jpg">
+				<div class="layer"><div class="txt">北大资源·紫境府</div></div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="box">
+				<img src="images/house02.jpg">
+				<div class="layer"><div class="txt">融创·香璟臺</div></div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="box">
+				<img src="images/house03.jpg">
+				<div class="layer"><div class="txt">北大资源·紫境府</div></div>
+			</a>
+		</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<div class="wx-public-des">
+		<div class="maintitle">CSS帧动画控制</div>
+<pre><strong>知识点：</strong>
+.keyframeslist li:hover .layer {  animation:hover 1s forwards}
+
+@keyframes hover {
+	0%{ opacity: 0; top:100%;}
+	100%{opacity: 1; top:8px;}
+}
+</pre>
+
+<div class="clear"></div>
+</div>
+<div class="wrap">
+	<ul class="list keyframeslist">
+		<li>
+			<a href="#" class="box">
+				<img src="images/house01.jpg">
+				<div class="layer"><div class="txt">北大资源·紫境府</div></div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="box">
+				<img src="images/house02.jpg">
+				<div class="layer"><div class="txt">融创·香璟臺</div></div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="box">
+				<img src="images/house03.jpg">
+				<div class="layer"><div class="txt">北大资源·紫境府</div></div>
+			</a>
+		</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<p><br></p><p><br></p><p><br></p><p><br></p>
+
+<script>
+$(function(){
+
+	$("#jslist li").hover(function(){
+		$(this).find(".layer").stop().animate({"top":"8px","opacity":"1"})
+	},function(){
+		$(this).find(".layer").stop().animate({"top":"100%","opacity":"0"})
+	})
+
+})
+	
+</script>
+
+</body>
+</html>

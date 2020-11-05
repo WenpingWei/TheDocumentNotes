@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>list</title>
+    <style>
+        html,
+        body {
+            margin: 0 auto;
+            padding: 0;
+            font-size: 14px;
+            color: #333;
+            font-family: Consolas, Helvetica, sans-serif
+        }
+
+        .wrapper {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .m-desc {
+            line-height: 1.8;
+        }
+
+        .m-title {
+            font-size: 18px;
+        }
+       
+
+        .clear {
+            width: 100%;
+            clear: both;
+            display: block;
+        }
+
+        .fl {
+            float: left;
+        }
+        .h2 { font-size: 16px;}
+
+        .list { list-style: none; padding: 0;}
+        .list li { border: 1px #dedede solid; background: #f9f9f9; display: block; margin: 5px auto; line-height: 1.2; padding:1rem 1rem;
+            
+        }
+        .list li a { color:#333; text-decoration: none; display:inline-block;}
+        .list li a:hover { color:#f30;}
+
+        .list2 { list-style: none; padding: 0;}
+        .list2 li {
+            border: 1px #dedede solid; background: #f9f9f9; display: block; margin: 5px auto; line-height: 1.2; padding:1rem 1rem;
+            transition:all .3s; /* 动画效果 及 持续时间 */
+        }
+        .list2 li .num { float: left;}
+        .list2 li .right {  margin-left: 30px;}
+        .list2 li a { color:#333; text-decoration: none; display: block; margin-left: 30px;}
+        .list2 li a:hover { color:#f30;}
+
+
+        .list3 li:hover {
+             /* 比例 */
+            transform: scale(1.01, 1.06);
+            /* transform: scale(2, 2); */
+
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* 投影 */
+        }
+
+        .list4 li:hover {
+            transform: translateX(10px); /* 横向移动 */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* 投影 */
+        }
+        .list5 li:hover {
+            border-left:5px #333 solid; /* 添加边框 */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* 投影 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+
+        <div class="m-desc">
+            <h1 class="m-title">列表</h1>
+        </div>
+        <h2 class="h2">常规列表</h2>
+        <ul class="list">
+            <li><a href="">1 / 列表标题，使用行高和padding</a></li>
+            <li><a href="">2 / 列表标题，使用行高和padding元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性</a></li>
+            <li><a href="">3 / 列表标题，使用行高和padding</a></li>
+            <li><a href="">4 / 列表标题，使用行高和padding</a></li>
+            <li><a href="">5 / 列表标题，使用行高和padding</a></li>
+        </ul>
+        <h2 class="h2">带内缩进列表</h2>
+        <ul class="list2">
+                <li><div class="num">1 / </div><a href="">列表标题，使用行高和padding</a></li>
+                <li><div class="num">2 / </div><a href="">列表标题，使用行高和padding元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性</a></li>
+                <li><div class="num">3 / </div><a href="">列表标题，使用行高和padding</a></li>
+                <li><div class="num">4 / </div><a href="">列表标题，使用行高和padding</a></li>
+                <li><div class="num">5 / </div><a href="">列表标题，使用行高和padding</a></li>
+        </ul>
+
+        <h2 class="h2">带动画交互列表</h2>
+        <ul class="list2 list3">
+            <li><div class="num">1 / </div><a href="">按比例缩放</a></li>
+            <li><div class="num">2 / </div><a href="">列表标题，使用行高和padding元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性</a></li>
+        </ul>
+        <ul class="list2 list4">
+            <li><div class="num">1 / </div><a href="">横向位移</a></li>
+            <li><div class="num">2 / </div><a href="">横向位移</a></li>
+        </ul>
+        <ul class="list2 list5">
+            <li><div class="num">1 / </div><a href="">添加边框</a></li>
+            <li><div class="num">2 / </div><a href="">添加边框</a></li>
+        </ul>
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+    </div>
+</body>
+
+</html>

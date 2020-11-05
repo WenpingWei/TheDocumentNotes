@@ -1,66 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>多级导航布局</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>多级导航布局</title>
+	</head>
+	<body>
+		<!-- <style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.nav {
+				border: 1px solid orange;
+				display: inline-block;
+				position: relative;
+			}
+			.nav-subCont {
+				display: none;
+				position: absolute;
+				bottom: -280px;
+				right: -604px;
+				border: 2px solid blue;
+				width: 600px;
+				height: 300px;
+			}
+			.nav li {
+				padding-left: 20px;
+			}
+			.nav span {
+				padding: 0 10px 0 15px;
+			}
+			.nav li:hover .nav-subCont {
+				display: block;
+			}
+		</style> -->
+		<!-- <h2>主题市场</h2>
+		<ul class="nav">
+			<li>
+				<a href="#">女装</a> / <a href="#">内衣</a> / <a href="#">家居</a>
+				<span> > </span>
+				<div class="nav-subCont">内容1</div>
+			</li>
+			<li>
+				<a href="#">女装</a> / <a href="#">内衣</a> / <a href="#">家居</a
+				><span> > </span>
+				<div class="nav-subCont">内容2</div>
+			</li>
+			<li>
+				<a href="#">女装</a> / <a href="#">内衣</a> / <a href="#">家居</a
+				><span> > </span>
+				<div class="nav-subCont">内容3</div>
+			</li>
+			<li>
+				<a href="#">女装</a> / <a href="#">内衣</a> / <a href="#">家居</a
+				><span> > </span>
+				<div class="nav-subCont">内容4</div>
+			</li>
+		</ul> -->
 
-    <style>
-        *{ margin: 0; padding: 0; list-style: none; }
-        .nav{ border: 1px solid orange; display: inline-block; position: relative; }
-        .nav-subCont{ 
-            display: none;
-            position: absolute;
-            bottom: -280px;
-            right: -604px;
-            border: 2px solid blue;
-            width: 600px;
-            height: 300px;
-        }
-        .nav li{ padding-left: 20px;  }
-        .nav span{ padding: 0 10px 0 15px; }
-        .nav li:hover .nav-subCont{ display: block; }
-
-    </style>
-    <h2>主题市场</h2>
-    <ul class="nav">
-        <li>
-            <a href="#">女装</a> / <a href="#">内衣</a> / <a href="#">家居</a>
-            <span> > </span>
-            <div class="nav-subCont">内容1</div>
-        </li>
-        <li><a href="#">女装</a> / <a href="#">内衣</a> / <a href="#">家居</a><span> > </span><div class="nav-subCont">内容2</div></li>
-        <li><a href="#">女装</a> / <a href="#">内衣</a> / <a href="#">家居</a><span> > </span><div class="nav-subCont">内容3</div></li>
-        <li><a href="#">女装</a> / <a href="#">内衣</a> / <a href="#">家居</a><span> > </span><div class="nav-subCont">内容4</div></li>
-    </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!-- <style>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<!-- <style>
         *{ margin: 0; padding: 0; list-style: none; }
         .nav-list{ width: 188px; border: 1px solid #f90; position: relative; }
         .nav-item{ padding-left: 20px; }
@@ -95,11 +106,8 @@
         </li>
     </ul> -->
 
-
-
-
-    <!-- 凸型结构 -->
-    <!-- <style>
+		<!-- 凸型结构 -->
+		<style>
         *{ margin: 0; padding: 0; list-style: none; }
         .nav-list{
             width: 188px;
@@ -163,6 +171,6 @@
             <span class="nav-item-rightarrow">&gt;</span>
             <div class="nav-info">内容4</div>
         </li>
-    </ul> -->
-</body>
+    </ul>
+	</body>
 </html>

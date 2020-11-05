@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css变换transform</title>
+</head>
+<body>
+    <!-- 1.为什么要有transform -->
+    <!--   当然是静态的页面对于用户交互而言不够直观 -->
+    <!-- <span class="span-a">万息一下，经验+1</span>
+    <br>
+    <a href="#">万息一下，经验+1</a>
+    <h1>0</h1>
+    <script>
+        var h1 = document.querySelector("h1");
+        document.querySelector(".span-a").onclick = function (){
+            h1.innerHTML = parseInt(h1.innerHTML) + 1
+        };
+        document.querySelector("a").onclick = function (){
+            h1.innerHTML = parseInt(h1.innerHTML) + 1
+        };
+    </script> -->
+
+
+
+    <!-- 2.css变换transform -->                                                                  
+    <!-- 更加直观和冲击的交互提醒样式 -->
+    <!-- <style>
+        *{ margin: 0; padding: 0; list-style: none; }
+        ul{ margin: 100px; }
+        li{ float: left;}
+        .layer{
+            width: 100px; height: 100px; 
+            /* margin: 0 20px; */
+            border: 1px solid black;
+            text-align: center; line-height: 100px;
+        }
+        /* 
+            transform:变换元素样式
+                translate:位移样式，改变元素的位置
+                rotate：旋转样式，改变元素的旋转结构
+                scale：缩放样式，改变元素比例
+                skew：反转样式，改变元素拉伸结构
+        */
+        li:hover{ background: pink; transform: rotate(45deg);}
+        /* li:hover{ background: pink; transform: translateX(50px);} */
+        li:hover .layer{ transform: rotate(-45deg) ; border: 1px solid transparent;}
+    </style>
+    <ul>
+        <li><div class="layer">内容1</div></li>
+        <li><div class="layer">内容2</div></li>
+        <li><div class="layer">内容3</div></li>
+        <li><div class="layer">内容4</div></li>
+    </ul> -->
+
+
+
+
+    <!-- 3.变换特性 -->
+    <!-- (1)transform存在很多能够改变变换效果的属性，自己要去尝试 -->
+    <!-- <style>
+        .ball{ 
+            width: 100px; height: 100px; background: pink;
+            position: absolute; top: 400px; left: 200px;
+            /* transform-origin: center -300px; */
+            /* transform-origin: left top; */
+        }
+        .ball:hover{ transform: rotate(15deg);}
+    </style> -->
+    <!-- <div class="ball"></div> -->
+    <!-- (2)transform变换是基于视觉效果的，与文档流元素排列无关 -->
+    <!-- <style>
+        div{ width: 100px; height: 100px; border: 1px solid black; }
+        .div1{ background-color: #f00; float: left; }
+        .div2{ background-color: #0f0; transform: translate(50px, 100px); }
+        .div3{ background-color: #00f; }
+    </style>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div> -->
+
+
+
+
+    <!-- 4.3D（了解） -->
+    <!-- transform-style: preserve-3d/flat; -->
+    <!-- <style>
+        .box{ 
+            width: 300px; height: 200px; border: 1px solid black; 
+            margin: 200px auto; position: relative;   
+            /* 只有带有本属性，才能把3d投影添加上 */
+            animation: ro 5s linear infinite;
+            transform-style: preserve-3d; 
+        }
+        .son{ position: absolute; }
+        .div1{
+            background-color: #f00; width: 100%; height: 100%;
+            transform: rotateY(45deg);
+        }
+        .div2{
+            background-color: #00f; width: 100%; height: 100%;
+            transform: rotateY(-45deg);
+        }
+        /* 后面要讲的帧动画，神奇不？ */
+        @keyframes ro{
+            from{ transform: rotateX(0deg); }
+            to{ transform: rotateX(360deg); }
+        }
+    </style>
+    <div class="box">
+        <div class="son div1"></div>
+        <div class="son div2"></div>
+    </div> -->
+</body>
+</html>

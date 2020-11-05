@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <!-- <style>
+        /* 整体容器样式 */
+        .container { background: #fa0; padding: 30px 0;}
+        /* 内容区样式 */
+        .wrap { width: 1200px; margin: 0 auto; overflow: hidden; }
+        /* 内容区-标题样式 */
+        .container h1, .container h2{ text-align: center; position: relative; }
+        .container h1 span{ font-weight: bold; }
+        .container h1::after {
+            content: ""; display: inline-block; width: 100px; 
+            margin-left: -50px;
+            border-bottom: 2px #333 solid; 
+            position: absolute; top: 60px; left: 50%;
+        }
+        .container h2 { margin-top:40px; font-size: 12px; color: #333; }
+        /* 内容区-顶部导航样式 */
+        .container-tag { margin-top:40px; text-align: center; }
+        .container-tag a {
+            display: inline-block; margin: 0 10px; border: 1px #fff solid;
+            border-radius: 2px; padding: 0 10px; line-height:2; color: #333;}
+        /* .container-tag a.current { background: #fff; } */
+        .container-tag a:hover { background: #fff; }
+        /* 内容区-列表样式 */
+        .container-list { margin: 0 -15px; }
+        /* .container-list::after{ content: ""; display: block; clear: both; } */
+        .container-list li { width: 25%; height: 280px; float: left; margin-top: 30px;  }
+        .container-list li .layer { display: block; margin: 0 15px; position: relative;  }
+        .container-list li img { width: 100%; height: 280px; object-fit: cover; display: block;}
+        .container-list-text {
+            position: absolute; 
+            width: 100%; height: 100%; background: rgba(0, 0, 0, .8);
+            text-align: center; color: #fff; 
+            display: none;
+        }
+        .container-list-text h3 { font-size: 24px; margin-top: 50px; }
+        .container-list-text p { font-size:14px; margin-top: 20px; }
+        .container-list li:hover .container-list-text { display: block; }    
+    </style> -->
+    <div class="container">
+        <div class="wrap">
+            <h1>OUR <span>PORTFOLIO</span></h1>
+            <h2>栏目标题+栏目简介+子栏目+图片列表（鼠标效果）(同类型2个)</h2>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit,. Duis sedLorem ipsum dolor sit amet, consectetur adipiscing elit,</h2>
+            ul.container-tag>li>a
+            <div class="container-tag">
+                <a href="">All</a>
+                <a href="">Dubl</a>
+                <a class="current" href="">Malden</a>
+                <a href="">SPPA</a>
+                <a href="">PARE</a>
+            </div>
+            <ul class="container-list">
+                <li>
+                    <a class="layer">
+                        <div class="container-list-text">
+                            <h3>PROJECT TITLE</h3>
+                            <p>App develepment</p>
+                        </div>
+                        <img src="images/jing1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a class="layer">
+                        <div class="container-list-text">
+                            <h3>PROJECT TITLE</h3>
+                            <p>App develepment</p>
+                        </div>
+                        <img src="images/jing1.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+            列表
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <style>
+        .wrap{ width: 1200px; margin: 0 auto; }
+        /* 列表样式 */
+        .news-list::after{ content: ""; display: block; clear: both; }
+        .news-list li { width: 50%; height: 140px; float: left; margin: 20px auto; }
+        .news-list li .layer { margin: 13px 15px;  }
+        .news-list li .layer::after{ content: ""; display: block; clear: both; }
+        .news-list-img { 
+            width: 80px; height: 80px;
+            border-radius: 50%; border: 1px #eee solid; 
+            padding: 5px; background: #f1f1f1; 
+            object-fit: cover; 
+            float: right; 
+            margin-left: 20px;
+        }
+        .news-list-text { text-align: right; }
+        .news-list-text b { font-size:24px; }
+        .news-list-text p {
+            font-size: 12px; 
+            line-height: 1.8; 
+            overflow : hidden;
+            text-overflow: ellipsis; 
+            display: -webkit-box; 
+            -webkit-line-clamp: 4; 
+            -webkit-box-orient: vertical; 
+            margin-right: 90px;
+        }
+        .news-list li:nth-child(2n) .news-list-img { float: left; margin-left: 0px; margin-right: 20px; }
+        .news-list li:nth-child(2n) .news-list-text { text-align: left; }
+    </style>
+
+    <section class="news">
+        <div class="wrap">
+        <ul class="news-list">
+            <li>
+                <div class="layer">
+                    <img class="news-list-img" src="images/nan.jpg">
+                    <div class="news-list-text">
+                        <b>The title on the article</b>
+                        <p>须搞懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相信很多初学者对这些属性存在许多困惑，容易把它们混淆，本文旨在帮助大家理清它们之间的关系并彻底搞懂它们。这里说明一点，__proto__属性的两边是各由两个下划线构成（这里为了方便大家看清，在两下划线之间加入了一个空格：_ _proto_ _，读作“</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="layer">
+                    <img class="news-list-img" src="images/zhao3.jpg">
+                    <div class="news-list-text">
+                        <b>The title on the article</b>
+                        <p>须搞懂JS中的prototype、__proto__与constructor属性，相信很多初学者对这些属性存在许多困惑，容易把它们混淆，本文旨在帮助大家理清它们之间的关系并彻底搞懂它们。这里说明一点，__proto__属性的两边是各由两个下划线构成（这里为了方便大家看清，在两下划线之间加入了一个空格：_ _proto_ _，读作“</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="layer">
+                    <img class="news-list-img" src="images/nan.jpg">
+                    <div class="news-list-text">
+                        <b>The title on the article</b>
+                        <p>须搞懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相懂JS中的prototype、__proto__与constructor属性，相信很多初学者对这些属性存在许多困惑，容易把它们混淆，本文旨在帮助大家理清它们之间的关系并彻底搞懂它们。这里说明一点，__proto__属性的两边是各由两个下划线构成（这里为了方便大家看清，在两下划线之间加入了一个空格：_ _proto_ _，读作“</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="layer">
+                    <img class="news-list-img" src="images/zhao3.jpg">
+                    <div class="news-list-text">
+                        <b>The title on the article</b>
+                        <p>须搞懂JS中的prototype、__proto__与constructor属性，相信很多初学者对这些属性存在许多困惑，容易把它们混淆，本文旨在帮助大家理清它们之间的关系并彻底搞懂它们。这里说明一点，__proto__属性的两边是各由两个下划线构成（这里为了方便大家看清，在两下划线之间加入了一个空格：_ _proto_ _，读作“</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </section>
+
+</body>
+</html>
